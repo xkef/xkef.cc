@@ -1,0 +1,52 @@
+{
+  "name": "xkef",
+  "private": true,
+  "version": "0.0.1",
+  "author": "xkef",
+  "license": "GPLv3",
+  "dependencies": {
+    "animejs": "^3.1.0",
+    "antd": "^3.26.7",
+    "classnames": "^2.2.6",
+    "enquire-js": "^0.2.1",
+    "gatsby": "^2.18.22",
+    "gatsby-image": "^2.2.34",
+    "gatsby-plugin-emotion": "^4.1.21",
+    "gatsby-plugin-manifest": "^2.2.31",
+    "gatsby-plugin-no-sourcemaps": "^2.1.2",
+    "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-sass": "^2.1.27",
+    "gatsby-plugin-typescript": "^2.1.26",
+    "gatsby-source-filesystem": "^2.1.40",
+    "gatsby-transformer-remark": "^2.6.48",
+    "memoize-one": "^5.1.1",
+    "node-sass": "^4.13.0",
+    "omit.js": "^1.0.2",
+    "prop-types": "^15.7.2",
+    "rc-texty": "^0.2.0",
+    "rc-tween-one": "^2.6.8",
+    "react": "^16.12.0",
+    "react-container-query": "^0.11.0",
+    "react-document-title": "^2.0.3",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.8",
+    "@types/react": "^16.8.22",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-helmet": "^5.0.8",
+    "gh-pages": "^2.0.1",
+    "prettier": "^1.1.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,ts,tsx,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  }
+}

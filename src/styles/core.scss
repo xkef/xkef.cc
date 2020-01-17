@@ -1,0 +1,103 @@
+
+// Some best-practice CSS that's useful for most apps
+// Just remove them if they're not what you want
+@import 'mixin', 'iconfont';
+//base core
+html {
+  // IE
+  @include prefix(box-sizing, $box-sizing);
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: auto;
+  overflow-x: hidden;
+}
+#root {
+  overflow: hidden;
+}
+//core
+html,
+body {
+  margin: 0;
+  padding: 0;
+  @include prefix(box-sizing, $box-sizing);
+  font-size: $font-size-base;
+  font-family: $font-family-default;
+  //default background
+  background: $default-background-color;
+
+  -webkit-font-smoothing: antialiased;
+
+  -webkit-tap-highlight-color: transparent;
+
+  @include prefix(text-size-adjust, 100%);
+  @include prefix(transition, background 1s cubic-bezier(0.075, 0.82, 0.165, 1));
+}
+//
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+header,
+footer,
+section,
+article {
+  text-align: inherit;
+}
+//kill chrome
+input,
+button,
+select,
+textarea {
+  outline: none;
+  &:focus {
+    outline: 0;
+  }
+}
+//chrome
+textarea {
+  resize: none;
+  overflow: hidden;
+}
+select::-ms-expand {
+  /* for IE 11 */
+  display: none;
+}
+button {
+  margin: 0px;
+  border-radius: 0px;
+  outline: none;
+}
+ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  background-color: transparent;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  @include prefix(transition, color 0.3s);
+  -webkit-text-decoration-skip: objects;
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// chrome
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: rgb(250, 255, 189); /* #FAFFBD; */
+  background-image: none;
+  color: $dark-color;
+}
+i,
+img {
+  -webkit-tap-highlight-color: transparent;
+}
