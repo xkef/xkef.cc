@@ -1,9 +1,5 @@
 # xkef.cc
 
-personal playground, having fun with:
+personal playground: `gatsby`, `anime.js`, `antd`
 
-- gatsby
-
-- anime.js
-
-- antd
+![](assets/scrot.png)
