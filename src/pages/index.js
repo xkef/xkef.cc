@@ -6,7 +6,7 @@ import { Layout } from "antd";
 import { ContainerQuery } from 'react-container-query';
 
 import HomePageComponent from "../components/home";
-import GlobalFooter from "../components/home/components/GlobalFooter";
+// import GlobalFooter from "../components/home/components/GlobalFooter";
 
 import config from "../config"
 
@@ -60,8 +60,8 @@ class IndexPage extends PureComponent {
       });
     });
     this.enquireHandler = enquireScreen(mobile => {
-      const { ismobile, dispatch } = this.props;
-      this.setState({ismobile: mobile || false})
+
+      this.setState({ismobile: mobile || true})
     });
   }
 
@@ -80,32 +80,27 @@ class IndexPage extends PureComponent {
     } = this.props;
 
     const classLayoutContainer = cx({
-      [`${prefix}-layout`]: true
+      [`${"mux"}-layout`]: true
     });
     const classLayoutFooter = cx({
       [`mux-layout-footer`]: true
     });
-
+    const classLayoutContent = cx({
+      [`mux-layout-layout-content`]: true,
+    });
     return (<React.Fragment>
-        <DocumentTitle title={"anim-xkef"}>
+        <DocumentTitle title={"hi :)"}>
           <ContainerQuery query={query}>
           {params => (
             <div className={classNames(params)}>
               <Layout className={classLayoutContainer}>
                 <Content>
-                  <HomePageComponent ismobile={ismobile} />
-
-
-
-
+                  <HomePageComponent className={classLayoutContent} ismobile={this.state.ismobile} />
                 </Content>
-
               </Layout>
-
             </div>)}
             </ContainerQuery>
       </DocumentTitle>
-{/* <Footer> <GlobalFooter ismobile={ismobile} /></Footer> */}
       </React.Fragment>
     )
   }

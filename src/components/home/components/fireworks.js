@@ -55,7 +55,7 @@ const fireworks = canvasEl => {
           easing: "easeOutQuad"
         },
         lineWidth: 0,
-        duration: 2000000,
+        duration: 400000,
         easing: "easeOutQuint",
         update: renderParticule,
         offset: 0,

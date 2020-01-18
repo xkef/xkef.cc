@@ -49,7 +49,7 @@ class HomePageComponent extends PureComponent {
   }
 
   render() {
-    const { interaction, ismobile } = this.props
+    const { interaction } = this.props
     return (
       <article className="home">
         <canvas className="fireworks" />
@@ -149,7 +149,7 @@ class HomePageComponent extends PureComponent {
               mode="smooth"
               type="scale"
               className="description"
-              style={ismobile ? { marginBottom: "1rem" } : { maxWidth: 1120 }}
+              style={this.props.ismobile ? { margin: "0.5rem" } : { maxWidth: 1120 }}
             >
               {footer.description}
             </Texty>

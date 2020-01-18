@@ -6,7 +6,7 @@ export default {
   title: "xkef",
   content: {},
   footer: {
-    description: "hacker, full-stack dev, edm prod | <3 physics & ginger tea :)",
+    description: "hacker, dev, edm prod | physics & ginger tea <3",
 
     mains: {
       buttons: [
